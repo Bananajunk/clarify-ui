@@ -1,0 +1,16 @@
+# Dependency directories
+
+node_modules/
+
+# Optional eslint cache
+
+.eslintcache
+
+# Stores VSCode versions used for testing VSCode extensions
+
+.vscode-test
+
+# Finder (MacOS) folder config
+.DS_Store
+
+*storybook.log
