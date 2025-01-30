@@ -5,8 +5,9 @@ import { classNames } from "~/utilities";
 
 import { Variant } from "./Typography.types";
 const Typography: React.FC<TypographyProps> = ({
-  as = "p",
   variant,
+  as = "p",
+  className,
   children,
 }: TypographyProps) => {
   const variantClass = useMemo(() => {
@@ -36,9 +37,17 @@ const Typography: React.FC<TypographyProps> = ({
     }
   }, [variant]);
 
+  const defaults = useMemo(() => {
+    let defaults = ["font-sans"];
+    if (as === "code") {
+      defaults = defaults.filter((d) => d !== "font-sans");
+    }
+    return defaults;
+  }, [as]);
+
   return createElement(
     as,
-    { className: classNames("font-sans", variantClass) },
+    { className: classNames(...defaults, variantClass, className) },
     children,
   );
 };

@@ -40,21 +40,46 @@ export const Heading: Story = {
 
 export const Body: Story = {
   args: {
+    as: "p",
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut.",
   },
   render: (args) => (
     <section className="flex flex-col gap-8">
-      <Typography as="p" variant={Variant.BodyLg}>
+      <Typography {...args} variant={Variant.BodyLg}>
         {args.children}
       </Typography>
-      <Typography as="p" variant={Variant.BodyMd}>
+      <Typography {...args} variant={Variant.BodyMd}>
         {args.children}
       </Typography>
-      <Typography as="p" variant={Variant.BodySm}>
+      <Typography {...args} variant={Variant.BodySm}>
         {args.children}
       </Typography>
-      <Typography as="p" variant={Variant.BodyXs}>
+      <Typography {...args} variant={Variant.BodyXs}>
+        {args.children}
+      </Typography>
+    </section>
+  ),
+};
+
+export const Monospace: Story = {
+  args: {
+    as: "code",
+    children:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut.",
+  },
+  render: (args) => (
+    <section className="flex flex-col gap-8">
+      <Typography {...args} variant={Variant.BodyLg}>
+        {args.children}
+      </Typography>
+      <Typography {...args} variant={Variant.BodyMd}>
+        {args.children}
+      </Typography>
+      <Typography {...args} variant={Variant.BodySm}>
+        {args.children}
+      </Typography>
+      <Typography {...args} variant={Variant.BodyXs}>
         {args.children}
       </Typography>
     </section>
