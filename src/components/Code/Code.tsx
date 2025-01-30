@@ -3,9 +3,11 @@ import type { CodeProps } from "./Code.types";
 
 const Code: React.FC<CodeProps> = ({ children }: CodeProps) => {
   return (
-    <Typography as="code" className="bg-gray-100 px-4 rounded-sm">
-      {children}
-    </Typography>
+    <span className="inline-block bg-gray-100 px-2 mx-1 rounded-sm">
+      <Typography as="code" className="whitespace-pre-wrap">
+        {children}
+      </Typography>
+    </span>
   );
 };
 

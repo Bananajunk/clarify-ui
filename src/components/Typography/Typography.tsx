@@ -32,8 +32,6 @@ const Typography: React.FC<TypographyProps> = ({
         return "text-sm";
       case Variant.BodyXs:
         return "text-xs";
-      default:
-        return "text-md";
     }
   }, [variant]);
 
