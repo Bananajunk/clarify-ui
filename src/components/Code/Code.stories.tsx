@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Code from "./Code";
-import { Typography, Variant } from "../Typography";
+import { Typography } from "../Typography";
 
 const meta: Meta<typeof Code> = {
   component: Code,
@@ -14,17 +14,17 @@ export const Default: Story = {
   args: { children: "const greeting = 'Hello World!';" },
   render: (args) => (
     <div className="flex flex-col gap-8">
-      <Typography as="p" variant={Variant.BodyLg}>
+      <Typography as="p" variant="bodyLg">
         Here is an example of some inline code
         <Code {...args} />
         and some text.
       </Typography>
-      <Typography as="p" variant={Variant.BodyMd}>
+      <Typography as="p" variant="bodyMd">
         Here is an example of some inline code
         <Code {...args} />
         and some text.
       </Typography>
-      <Typography as="p" variant={Variant.BodySm}>
+      <Typography as="p" variant="bodySm">
         Here is an example of some inline code
         <Code {...args} />
         and some text.

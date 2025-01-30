@@ -3,7 +3,6 @@ import type { TypographyProps } from "./Typography.types";
 import { createElement, useMemo } from "react";
 import { classNames } from "~/utilities";
 
-import { Variant } from "./Typography.types";
 const Typography: React.FC<TypographyProps> = ({
   variant,
   as = "p",
@@ -12,25 +11,25 @@ const Typography: React.FC<TypographyProps> = ({
 }: TypographyProps) => {
   const variantClass = useMemo(() => {
     switch (variant) {
-      case Variant.Heading2Xl:
+      case "heading2Xl":
         return "text-6xl";
-      case Variant.HeadingXl:
+      case "headingXl":
         return "text-5xl";
-      case Variant.HeadingLg:
+      case "headingLg":
         return "text-4xl";
-      case Variant.HeadingMd:
+      case "headingMd":
         return "text-3xl";
-      case Variant.HeadingSm:
+      case "headingSm":
         return "text-2xl";
-      case Variant.HeadingXs:
+      case "headingXs":
         return "text-xl";
-      case Variant.BodyLg:
+      case "bodyLg":
         return "text-lg";
-      case Variant.BodyMd:
+      case "bodyMd":
         return "text-md";
-      case Variant.BodySm:
+      case "bodySm":
         return "text-sm";
-      case Variant.BodyXs:
+      case "bodyXs":
         return "text-xs";
     }
   }, [variant]);
